@@ -1,21 +1,29 @@
 $(document).ready(function () {
     console.log("Inside the ready function.");
-    // var currentDate = moment().format('dddd, MMM Do');
-    // console.log(currentDate);
+
+    // Variables
+
     $(".today-date").append(moment().format('dddd, MMM Do'));
-    var daystart = 8;
-    var hourBlock = daystart;
-    var dayHours = 9;
+var hourBlocks = [9, 10, 11, 12, 1, 2, 3, 4, 5]
 
-    for (var i = 0; i < dayHours; i++) {
-        hourBlock++;
-        if (hourBlock > 12) {
-            hourBlock = hourBlock - 12;
+
+
+    // Functions
+
+    function createHourBlocks() {
+        for(var i = 0; i < hourBlocks.length; i++) {
+            var hourRow = $("#working-area").text("<div class='row newRow'></div>");
+            $(".newRow").addClass("hour-row-" + hourBlocks[i]);
+            $("#work-area").append
             
-        }
-        console.log(hourBlock);
-    }
 
+
+
+        }
+
+        
+    }
+createHourBlocks();
     // Build hour rows dynamically one for each our from 9am to 6pm
         // Hour Div
         // Text Area Div
